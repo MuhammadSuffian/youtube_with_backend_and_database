@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="youtube.png" type="image/x-icon">
+<title>Server</title>
+</head>
+<body>
+
+<h2>Submitted Comment</h2>
+
+<script>
+// Retrieve submitted data from URL parameters
+const urlParams = new URLSearchParams(window.location.search);
+const comment = urlParams.get('fname');
+
+// Display submitted comment
+document.write("Submitted Comment: " + comment + "<br>");
+
+// Perform search functionality
+var containsElection = comment.toLowerCase().includes("election");
+var containsRigging = comment.toLowerCase().includes("rigging");
+
+// Display search results
+document.write("Word 'election' exists =  " + containsElection + "<br>");
+document.write("Word 'rigging' exists =   " + containsRigging + "<br>");
+</script>
+
+</body>
+</html>
